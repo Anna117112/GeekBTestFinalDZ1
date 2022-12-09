@@ -14,4 +14,23 @@
         return arr;
     }
 }
+int ExaminationdArr(String[] arr)
+{
+
+    int count = 0;
+    String s = "";
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            s += arr[i] + " ";
+            count++;
+        }
+
+    }
+
+    return count;
+}
+
+
 
