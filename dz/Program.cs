@@ -1,7 +1,7 @@
 ﻿String[] UserArr()
 {
 
-    System.Console.WriteLine("Введите слова через пробед");
+    System.Console.WriteLine("Введите слова через пробел");
     String s = Console.ReadLine();
     if (s.Length != 0)
     {
@@ -85,6 +85,5 @@ String[] arr = UserArr();
 PrintArray(arr);
 int count = ExaminationdArr(arr);
 String[] newArr = ConvertedArr(arr, count);
-System.Console.WriteLine();
-System.Console.WriteLine("->");
+System.Console.Write("->");
 PrintArray(newArr);
