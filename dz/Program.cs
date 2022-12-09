@@ -48,3 +48,43 @@ void PrintArray(String[] array)
     }
     Console.Write("]");
 }
+
+
+String[] ConvertedArr(String[] arr, int count)
+{
+    if (count != 0)
+    {
+        String s = "";
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i].Length <= 3)
+            {
+                s += arr[i] + " ";
+
+            }
+        }
+
+        String[] convertArr = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+        return convertArr;
+    }
+    else
+    {
+        String[] convertArr = new String[0];
+        System.Console.WriteLine("Нет строк длинна которых соответствует условию");
+        return convertArr;
+    }
+
+
+
+}
+
+
+String[] arr = UserArr();
+PrintArray(arr);
+int count = ExaminationdArr(arr);
+String[] newArr = ConvertedArr(arr, count);
+System.Console.WriteLine();
+System.Console.WriteLine("->");
+PrintArray(newArr);
